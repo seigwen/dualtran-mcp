@@ -1,0 +1,47 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.seigwen/dualtran-mcp",
+  "description": "Translate text with Google or your own AI model (BYOK, 20+ providers) from any MCP client.",
+  "repository": {
+    "url": "https://github.com/seigwen/dualtran-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "dualtran-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "DUALTRAN_PROVIDER",
+          "description": "AI provider id (openai, anthropic, google, deepseek, ...). Optional — Google works without a key.",
+          "isRequired": false,
+          "format": "string"
+        },
+        {
+          "name": "DUALTRAN_API_KEY",
+          "description": "API key for the selected AI provider (BYOK). Optional.",
+          "isRequired": false,
+          "format": "string",
+          "isSecret": true
+        },
+        {
+          "name": "DUALTRAN_MODEL",
+          "description": "Model id for the AI provider (e.g. gpt-4o-mini). Optional.",
+          "isRequired": false,
+          "format": "string"
+        },
+        {
+          "name": "DUALTRAN_TARGET_LANG",
+          "description": "Default target language code (default: en).",
+          "isRequired": false,
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}
