@@ -17,7 +17,7 @@ Desktop, Cursor, Cline, VS Code and any other MCP client. Powered by
 ## Install
 
 ```bash
-npx -y dualtran-mcp            # once published to npm
+npx -y dualtran-mcp
 # or straight from this repository (works today, no registry needed):
 npx -y github:seigwen/dualtran-mcp
 ```
