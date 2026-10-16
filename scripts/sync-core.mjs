@@ -4,8 +4,9 @@
  *
  * Builds src/core in the extension repo, stages a publishable package (the
  * core repo does not ship npm metadata yet — consumers need a resolvable entry
- * point), packs it and drops vendor/dualtran-core.tgz, which package.json
- * references as a file: dependency. Re-run after any core change.
+ * point) and packs it as vendor/dualtran-core.tgz for inspection. Since
+ * dualtran@1.0.0 the registry range in package.json is what consumers get;
+ * keep this script for pre-release core bumps.
  *
  * CORE_REPO env overrides the default extension path.
  */

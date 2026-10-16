@@ -14,12 +14,9 @@ registry login). The code side is complete and verified offline.
 
 ## User actions (in order — plan 64 D6: core first)
 
-1. **Publish the core first.** The package currently consumes the core via
-   `"dualtran": "file:vendor/dualtran-core.tgz"`. A `file:` dependency cannot
-   be published to npm. After `dualtran` (or `@dualtran/core`) is on npm:
-   - change that dependency to the published version range (one line),
-   - `npm install`, `npm test` again,
-   - then this package can be published.
+1. **Core published (2026-10-16).** `dualtran@1.0.0` is live on npm and this
+   package consumes it via `"dualtran": "^1.0.0"`; the former
+   `file:vendor/dualtran-core.tgz` vendoring is retired.
 2. Publish this package:
    ```bash
    npm login                 # your account
